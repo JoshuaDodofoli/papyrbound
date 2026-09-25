@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   description: "A quiet place for words worth keeping.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
