@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     "A modern desktop library for comics, manga, and illustrated books.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" className={`${haffer.variable} ${geistMono.variable}`}>
       <body className="grid min-h-dvh grid-cols-[288px_minmax(0,1fr)] bg-mono-100">
